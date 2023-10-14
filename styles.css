@@ -1,0 +1,181 @@
+/* Gotham Pro Regular */
+@font-face {
+    font-family: 'Gotham Pro Bold';
+    src: url('/font/gothampro_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Gotham Pro Regular';
+    src: url('/font/gothampro_light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #141414;
+    color: #fff;
+    overflow: hidden;
+    font-family: "Gotham Pro Regular", serif;
+}
+
+
+
+#Header {
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    height: 50vh;
+    /* border: 1px solid blue; */
+}
+
+#MySocials {
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    margin-top: 5vh;
+    align-items: center;
+    height: 50vh;
+    /* border: 1px solid green; */
+}
+
+.Bold-Text {
+    font-family: "Gotham Pro Bold", serif;
+}
+
+#Text-Blue {
+    color: #4370E5;
+}
+
+#Header-Title {
+    font-size: 4rem;
+}
+
+#Header-Description {
+    font-size: 1.5rem;
+    max-width: 40ch;
+    margin-top: 4vh;
+}
+
+#Socials-Title {
+    font-size: 2.25rem;
+    margin-bottom: 5vh;
+}
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4370E5;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.4s;
+}
+  
+  .Button:hover {
+    background-color: #2d4c9b;
+    cursor:pointer;
+  }
+
+#Button-List {
+    display: flex;
+    justify-content: center;
+    gap: 3.125rem;
+}
+
+.blop {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: #4370E5;
+    filter: blur(15rem);
+}
+
+.first {
+    top: -10rem;
+    left: -10rem;
+}
+
+.second {
+    right: -10rem;
+    bottom: -10rem;
+
+}
+
+
+
+
+
+
+.Container {
+    /* border: 1px solid red; */
+    font-family: "Gotham Pro Regular", serif;
+    text-align: center;
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media (max-width: 1536px) {
+    .Container {
+        max-width: 1280px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .Container {
+        max-width: 1024px;
+    }
+
+    .blop {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Container {
+        max-width: 768px;
+    }
+
+    .blop {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .Container {
+        max-width: 640px;
+    }
+    .blop {
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 640px) {
+    .Container {
+        max-width: 475px;
+    }
+
+}
+
+@media (max-width: 475px) {
+    .Container {
+        width: 100%;
+    }
+
+}
