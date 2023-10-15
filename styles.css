@@ -109,6 +109,10 @@ body {
   
 .Button:hover {
     cursor:pointer;
+    box-shadow: 0 0 10px var(--favcolor30), 
+                 0 0 20px var(--favcolor30),
+                 0 0 30px var(--favcolor30),
+                 0 0 80px var(--favcolor30);
     transform: scale(1.2);
     transition: transform .5s;
 }
