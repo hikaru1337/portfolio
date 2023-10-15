@@ -4,25 +4,66 @@
     src: url('font/gothamprobold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-  }
+}
   
   
-  @font-face {
+@font-face {
     font-family: 'Gotham Pro Regular';
     src: url('font/gothamprolight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-
-
+}
 
 * {
     margin: 0;
     padding: 0;
 }
 
+
+
+
+.star{
+   z-index: 10;
+   position: absolute;
+   background: white;
+   border-radius: 50px;
+   animation: move 300s linear infinite;
+   /*animation: move;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear; */
+}
+
+
+.type-1{
+   width: 1px;
+   height: 1px;
+}
+.type-2{
+   width: 2px;
+   height: 2px;
+}
+.type-3{
+   width: 3px;
+   height: 3px;
+}
+
+
+@keyframes move {
+   0% { 
+    transform: translateY(100vh); 
+}
+   100% { 
+    transform: translateY(-100vh); 
+}
+}
+
+
+
+
+
+
 body {
-    background-color: #0e0e0e;
+    background-color: #0e0e0e; 
     color: #fff;
     overflow: hidden;
     font-family: "Gotham Pro Regular", serif;
@@ -53,6 +94,12 @@ body {
     font-family: "Gotham Pro Bold", serif;
 }
 
+
+
+
+
+
+
 #Text-Blue {
     color: #4370E5;
 }
@@ -79,14 +126,19 @@ body {
     background-color: #4370E5;
     width: 70px;
     height: 70px;
-    border-radius: 8px;
     border: none;
+    border-radius: 8px;
     transition-duration: 0.4s;
 }
   
 .Button:hover {
-    background-color: #2d4c9b;
+    background-color: #467bff;
     cursor:pointer;
+    box-shadow: 0 0 10px #467bff, 
+                 0 0 30px #467bff,
+                 0 0 60px #467bff,
+                 0 0 90px #467bff;
+    animation: glow 10s linear infinite;
 }
 
 #Button-List {
@@ -102,20 +154,22 @@ body {
     border-radius: 100%;
     background-color: #4370E5;
     filter: blur(15rem);
+    transition: opacity 5s ease-in-out;
 }
 
-.first {
+#first {
     top: -10rem;
     left: -10rem;
 }
 
-.second {
+#second {
     right: -10rem;
     bottom: -10rem;
 }
 
 
 .Container {
+    z-index: 0;
     /* border: 1px solid red; */
     text-align: center;
     max-width: 1536px;
@@ -174,10 +228,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
+canvas { 
+    position:fixed;
+}
