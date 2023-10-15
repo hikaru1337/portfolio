@@ -1,10 +1,10 @@
 :root {
-    --background: rgba(14,14,14,1);
-    --favcolor: rgba(67,112,229,1);
-    --favcolor50: rgba(67,112,229,0.5);
-    --favcolor30: rgba(67,112,229,0.3);
-    --favcolor0: rgba(67,112,229,0);
-  }
+    --background: rgba(14, 14, 14, 1);
+    --favcolor: rgba(67, 112, 229, 1);
+    --favcolor50: rgba(67, 112, 229, 0.5);
+    --favcolor30: rgba(67, 112, 229, 0.3);
+    --favcolor0: rgba(67, 112, 229, 0);
+}
 
 
 @font-face {
@@ -13,8 +13,7 @@
     font-weight: bold;
     font-style: normal;
 }
-  
-  
+
 @font-face {
     font-family: 'Gotham Pro Regular';
     src: url('font/gothamprolight.ttf') format('truetype');
@@ -27,33 +26,6 @@
     padding: 0;
 }
 
-
-.star{
-   position: absolute;
-   background: #fff;
-   border-radius: 50px;
-   animation-name: move;
-   animation-duration: 12s;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-}
-
-
-@keyframes move {
-   0% { 
-    transform: translateY(100vh); 
-}
-   100% { 
-    transform: translateY(-100vh); 
-}
-}
-
-
-
-
-
-
-
 body {
     background: var(--background);
     color: #fff;
@@ -61,35 +33,15 @@ body {
     font-family: "Gotham Pro Regular", serif;
 }
 
-
-
-#Header {
+#Header, #MySocials {
     display: flex;
     flex-direction: column;
-    justify-content:end;
     align-items: center;
     height: 50vh;
-    /* border: 1px solid blue; */
 }
 
-#MySocials {
-    display: flex;
-    flex-direction: column;
-    /*justify-content:baseline;*/
-    margin-top: 8vh;
-    /*align-items: center;*/
-    height: 50vh;
-    /* border: 1px solid green; */
-}
-
-.Bold-Text {
-    font-family: "Gotham Pro Bold", serif;
-}
-
-
-
-#Text-Blue {
-    color: var(--favcolor);
+#Header {
+    justify-content:end;
 }
 
 #Header-Title {
@@ -102,10 +54,46 @@ body {
     margin-top: 4vh;
 }
 
+#MySocials {
+    margin-top: 8vh;
+}
+
 #Socials-Title {
     font-size: 2.25rem;
     margin-bottom: 5vh;
 }
+
+#Text-Blue {
+    color: var(--favcolor);
+}
+
+.Bold-Text {
+    font-family: "Gotham Pro Bold", serif;
+}
+
+#Text-Blue {
+    color: var(--favcolor);
+}
+
+.star{
+   position: absolute;
+   background: #fff;
+   border-radius: 50px;
+   animation-name: move;
+   animation-duration: 12s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+@keyframes move {
+   0% { 
+    transform: translateY(100vh); 
+}
+   100% { 
+    transform: translateY(-100vh); 
+}
+}
+
 
 .Button {
     display: flex;
@@ -116,15 +104,11 @@ body {
     height: 70px;
     border: none;
     border-radius: 8px;
-    transition-duration: 1s;
+    transition: all 1s;
 }
   
 .Button:hover {
     cursor:pointer;
-    box-shadow: 0 0 10px var(--favcolor30), 
-                 0 0 20px var(--favcolor30),
-                 0 0 30px var(--favcolor30),
-                 0 0 80px var(--favcolor30);
     transform: scale(1.2);
     transition: transform .5s;
 }
@@ -141,7 +125,7 @@ body {
     height: 250px;
     border-radius: 100%;
     background-color: var(--favcolor);
-    filter: blur(10rem);
+    filter: blur(15rem);
     transition: opacity 5s ease-in-out;
 }
 
