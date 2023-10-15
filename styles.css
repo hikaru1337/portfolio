@@ -1,7 +1,7 @@
 /* Gotham Pro Regular */
 @font-face {
     font-family: 'Gotham Pro Bold';
-    src: url('/font/gothampro_bold.ttf') format('truetype');
+    src: url('../font/gothampro_bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
   }
@@ -9,7 +9,7 @@
   
   @font-face {
     font-family: 'Gotham Pro Regular';
-    src: url('/font/gothampro_light.ttf') format('truetype');
+    src: url('../font/gothampro_light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
